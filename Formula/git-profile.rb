@@ -10,6 +10,6 @@ class GitProfile < Formula
   end
 
   test do
-    system "#{bin}/git-profile -v"
+    system "#{bin}/git-profile version"
   end
 end
