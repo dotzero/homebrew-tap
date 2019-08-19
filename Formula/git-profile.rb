@@ -2,15 +2,17 @@
 class GitProfile < Formula
   desc "Allows switch between multiple user profiles in git repositories"
   homepage "https://github.com/dotzero/git-profile"
-  version "1.3.0"
+  version "1.3.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/dotzero/git-profile/releases/download/v1.3.0/git-profile_1.3.0_macos_x86_64.tar.gz"
-    sha256 "a18bbb4d7b043c9db222f2c879ca7a857811acacdc19bbabe6ea195a2666cfd6"
+    url "https://github.com/dotzero/git-profile/releases/download/v1.3.1/git-profile_1.3.1_macos_x86_64.tar.gz"
+    sha256 "b57ebbb1cf57c3c84f5a357af929927324fcf6e4c56b0f36c2cceac7866c8166"
   elsif OS.linux?
-    url "https://github.com/dotzero/git-profile/releases/download/v1.3.0/git-profile_1.3.0_linux_x86_64.tar.gz"
-    sha256 "6e759e1ab82a3cdfba6cc0c0474219b9f42470d4a1c8711717938c42aa480d2a"
+    if Hardware::CPU.intel?
+      url "https://github.com/dotzero/git-profile/releases/download/v1.3.1/git-profile_1.3.1_linux_x86_64.tar.gz"
+      sha256 "ae6ccfb218a75737b1f19c722358d62e95fbc374807a4e992ee2e8001c154b52"
+    end
   end
 
   def install
