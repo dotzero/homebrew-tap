@@ -3,7 +3,6 @@ class GitProfile < Formula
   desc "Allows switch between multiple user profiles in git repositories"
   homepage "https://github.com/dotzero/git-profile"
   version "1.3.2"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/dotzero/git-profile/releases/download/v1.3.2/git-profile_1.3.2_macos_x86_64.tar.gz"
