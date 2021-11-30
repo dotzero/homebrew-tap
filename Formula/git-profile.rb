@@ -5,23 +5,21 @@
 class GitProfile < Formula
   desc "Git Profile allows to add and switch between multiple user profiles in your git repositories"
   homepage "https://github.com/dotzero/git-profile"
-  version "1.3.4"
+  version "1.3.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/dotzero/git-profile/releases/download/v1.3.4/git-profile_1.3.4_macOS-64bit.tar.gz"
-      sha256 "929556b52b46a006d356b23d75907a4ad28b5b1116cdfb318303036777effa35"
+    url "https://github.com/dotzero/git-profile/releases/download/v1.3.5/git-profile_1.3.5_macOS-all.tar.gz"
+    sha256 "b2c402bb94baef91ecee789446a9e175e053c16eafeff07585b2fd8499b5aa73"
 
-      def install
-        bin.install "git-profile"
-      end
+    def install
+      bin.install "git-profile"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/dotzero/git-profile/releases/download/v1.3.4/git-profile_1.3.4_Linux-64bit.tar.gz"
-      sha256 "37e8ee88c36dd61a1aae7818a78b0c6381d1bf3b72199cad249e535aa11fc476"
+      url "https://github.com/dotzero/git-profile/releases/download/v1.3.5/git-profile_1.3.5_Linux-64bit.tar.gz"
+      sha256 "e79b46f1a3a9d197aaf4becfac78f11f0a28804c7e3ff529c3c9a16208a33574"
 
       def install
         bin.install "git-profile"
