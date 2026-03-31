@@ -4,17 +4,17 @@ cask "git-profile" do
 
   on_macos do
     url "https://github.com/dotzero/git-profile/releases/download/v#{version}/git-profile_#{version}_macOS-all.tar.gz"
-    sha256 "2fb7487aeefd5b8607acc266ee795fee39d90c3b7edaa52fc912de1e10909323"
+    sha256 "9e9f24c786c98d44e03e32047f760e4f07404aa7e30a5054b54845e127e20fcb"
   end
 
   on_linux do
     on_intel do
       url "https://github.com/dotzero/git-profile/releases/download/v#{version}/git-profile_#{version}_Linux-amd64.tar.gz"
-      sha256 "2b8c47d7da33155541912bf676feb99bee49daf67a26186681a1e817609fd64d"
+      sha256 "1ac69dea1b83992362ee15cf2c214d14b56da3789c43087aa6a741a7575b3b60"
     end
     on_arm do
       url "https://github.com/dotzero/git-profile/releases/download/v#{version}/git-profile_#{version}_Linux-arm64.tar.gz"
-      sha256 "1291b25cada17423e016a227680c4c4093ce773946d7a59d796d242a3c9c9f2a"
+      sha256 "d55ceb0068e41783b4bfc9448981db0318fe9a320e52387dc08d2c11b0c34e77"
     end
   end
 
@@ -30,7 +30,7 @@ cask "git-profile" do
 
   postflight do
     if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/restish"]
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/git-profile"]
     end
   end
 
