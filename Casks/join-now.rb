@@ -1,6 +1,6 @@
 cask "join-now" do
-  version "0.5.0"
-  sha256 "3e059ad28fa6eafe7e73d9abd6c5f0665fbedb4dac07eca761e441d7695817b7"
+  version "0.5.1"
+  sha256 "9dd3293e5a910fdccc3a442b7ca00e78d7792f7f440f333ef085e4cfca46d5a4"
 
   url "https://github.com/dotzero/join-now/releases/download/v#{version}/JoinNow-#{version}.dmg"
   name "join-now"
