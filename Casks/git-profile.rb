@@ -27,9 +27,9 @@ cask "git-profile" do
 
   binary "git-profile"
 
-  postflight do
+  postflight_steps do
     if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/git-profile"]
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/git-profile"]
     end
   end
 
