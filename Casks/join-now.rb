@@ -1,6 +1,6 @@
 cask "join-now" do
-  version "0.5.4"
-  sha256 "ce17dd57989ef18143cbdff523a4a95b48b2f3ae7dd4cc94d2a8c1d35f5f1d6e"
+  version "0.5.5"
+  sha256 "4a15633f36069d1f6e463f78f9f3aa75ddf16fc41ab67463030cab144afde63b"
 
   url "https://github.com/dotzero/join-now/releases/download/v#{version}/JoinNow-#{version}.dmg"
   name "join-now"
@@ -15,7 +15,7 @@ cask "join-now" do
 
   postflight_steps do
     on_macos do
-      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{ .AppDir }}/JoinNow.app"]
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/JoinNow.app"]
     end
   end
 
