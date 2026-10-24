@@ -11,11 +11,10 @@ cask "join-now" do
   depends_on arch: :arm64
 
   app "JoinNow.app"
-  binary "#{appdir}/JoinNow.app/Contents/MacOS/JoinNow", target: "JoinNow"
 
   postflight_steps do
     on_macos do
-      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/JoinNow.app"]
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{appdir}/JoinNow.app"]
     end
   end
 
